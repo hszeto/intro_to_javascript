@@ -1,0 +1,209 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<!--[if IE 10]><html class="ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>Welcome | Blusukan - Responsive App Showcase</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Normalize CSS -->
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<!-- Foundation core CSS -->
+	<link rel="stylesheet" href="css/foundation.min.css">
+
+	<!-- Foundation font icons core CSS -->
+	<link rel="stylesheet" href="css/foundation-icons.css">
+
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="assets/css/help.css">
+
+	<!-- Google Web Fonts CSS -->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Raleway:400,700|Rock+Salt">
+
+	<!-- Favicons -->
+	<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<!-- For third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon/apple-touch-icon-144x144-precomposed.png">
+	<!-- For iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon/apple-touch-icon-114x114-precomposed.png">
+	<!-- For first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon/apple-touch-icon-72x72-precomposed.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="img/favicon/apple-touch-icon-precomposed.png">
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Modernizr Scripts -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+
+	<!-- HEADER -->
+	<header class="header">
+
+		<div class="row">
+
+			<div class="medium-12 columns">
+
+				<h3><a href="./index.html"><i class="fi-foundation"></i> Blusukan</a></h3>
+				
+			</div><!-- /.medium-12 .columns -->
+
+		</div><!-- /.row -->
+
+	</header><!-- /.header -->
+	<!-- HEADER -->
+
+
+
+
+	<!-- CONTENT -->
+	<section class="content">
+
+		<div class="row">
+
+			<div class="medium-7 small-centered columns">
+
+				<h2>User's guide</h2>
+				<div class="line"></div>
+				<div class="clearfix"></div>
+
+				<h4>CSS</h4>
+
+				<p>There are some css in this template. that is: <code>foundation.css</code>, <code>foundation-icon.css</code> and <code>main.css</code>.</p>
+				<p>And custom style for this template, I put all in <em>main.css</em>. Which consists of:</p>
+
+				<ul class="content-list">
+					<li>Global Styles</li>
+					<li>Custom CSS Foundation 5.0.2</li>
+					<li>Themes Styles</li>
+					<li>Media Queries</li>
+				</ul>
+
+				<p>If you want to change: <code>background-color</code>, <code>font-color</code>, <code>font-style</code> and others. Please changed from the &ldquo;comment&rdquo; <code>/* Themes Styles */</code>.</p>
+
+				<hr>
+
+				<h4>Javascript</h4>
+
+				<p>Not much I do for javascript. there are only a few javacript like: <code>foundation.min.js</code>, <code>jquery-1.10.2.min.js</code>, <code>modernizr-2.6.2.min.js</code>, <code>smoothscroll.js</code>, <code>maps.js</code> and <code>main.js</code>. For this template you just edit the javascript <em>maps</em>.js and <em>main.js</em>.</p>
+
+				<h5>Maps.js</h5>
+
+				<ul class="content-list">
+					<li>API key. You "MUST" signup for your own API key on <a href="https://developers.google.com/maps/documentation/javascript/tutorial#api_key">Developers Google</a></li>
+				</ul>
+				<pre>&lt;script type=&quot;text/javascript&quot; src=&quot;https://maps.googleapis.com/maps/api/js?key=<strong>AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc</strong>&amp;amp;sensor=false&quot;&gt;&lt;/script&gt;</pre>
+				<ul class="content-list">
+					<li>Change your location/coordinates with <strong>latitude</strong> and <strong>longitude</strong>.</li>
+				</ul>
+				<pre>var myLatlng = new google.maps.LatLng(37.28468, -121.95150);</pre>
+				<ul class="content-list">
+					<li>Maps color:</li>
+				</ul>
+				<pre>stylers:[ {"hue": "#b8d30a"} ]</pre>
+				<ul class="content-list">
+					<li>Using a div with id="map" (#map):</li>
+				</ul>
+				<pre>var mapElement = document.getElementById('map');</pre>
+				<ul class="content-list">
+					<li>Google Maps marker:</li>
+				</ul>
+				<pre>icon: 'http://s22.postimg.org/9aopl7pl9/marker.png'});</pre>
+
+				<h5>Main.js</h5>
+
+				<p>I just put the animation effects in the javascript. If you want to change, please refer to its css animation.</p>
+
+				<pre class="padding-left">.slideInLeft <em>and</em> .slideOutLeft</pre>
+
+				<hr>
+
+				<h4>Font icon</h4>
+
+				<p>If you want to change the font icon such as <em>font-size</em>, <em>font-color</em> and other, please change the font icon class as well. As examples of font icon that exist in the <code>services section</code>.</p>
+
+				<pre class="padding-left">&lt;div class=&quot;icon-services red&quot;&gt;
+	<strong>&lt;i class=&quot;fi-layout&quot;&gt;&lt;/i&gt;</strong>
+&lt;/div&gt;&lt;!-- /.icon-services .red --&gt;</pre>
+
+				<p>You have to change it in <code>main.css</code> like the example below:</p>
+
+				<pre class="padding-left">.icon-services .fi-foundation {
+	font-size: 2.813rem;
+	line-height: 2;
+}</pre>
+				<p>And it is also applies to social media links.</p>
+
+				<h4>Feedback</h4>
+
+				<p>If you have a question or you need to customize Blusukan - Responsive App Showcase template, please contact me at: <a href="mailto:info@aryandhani.com">info@aryandhani.com</a>. Thank you :)</p>
+				
+			</div><!-- /.medium-7 .small-centered .columns -->
+
+		</div> <!-- /.row -->
+
+	</section><!-- /.content -->
+	<!-- CONTENT -->
+
+
+
+
+	<!-- FOOTER -->
+	<footer class="footer">
+
+		<div class="row">
+
+			<div class="medium-6 columns">
+
+				<p>Copyright &copy; 2013 <a href="http://aryandhani.com/">Aryandhani</a>. <br>Made with <i class="fi-heart"></i> in Bandar Lampung.</p>
+				
+			</div><!-- /.medium-6 .columns -->
+
+			<div class="medium-6 columns">
+
+				<ul class="social-media">
+
+					<li><a href="https://facebook.com/dhaniaryan"><i class="fi-social-facebook"></i></a></li>
+					<li><a href="https://twitter.com/Aryandhani"><i class="fi-social-twitter"></i></a></li>
+					
+				</ul><!-- /.social-media -->
+				
+			</div><!-- /.medium-6 .columns -->
+
+		</div><!-- /.row -->
+
+	</footer><!-- /.footer -->
+	<!-- FOOTER -->
+
+
+
+
+	<!-- Load JS here for greater good -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script src="js/smoothscroll.js"></script>
+
+
+
+
+</body>
+
+</html>

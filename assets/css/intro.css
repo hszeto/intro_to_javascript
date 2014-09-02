@@ -1,0 +1,356 @@
+/* Table of Content
+==================================================
+	#Global Styles
+	#Custom CSS Foundation 5.0.2
+	#Themes Styles
+	#Media queries are built using ems in Foundation. */
+
+
+
+/* #Global Styles
+================================================== */
+
+
+
+/* Style */
+body {
+	background-color: #333;
+	font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	color: #fff;
+}
+
+
+
+/* Link */
+a {
+	color: #43ac6a;
+	-webkit-transition: 0.25s;
+			transition: 0.25s;
+}
+a:hover {
+	color: #3c9a5f;
+	text-decoration: underline;
+}
+a:focus {
+	outline: none;
+	outline: 0 auto -webkit-focus-ring-color;
+	outline-offset: 0;
+}
+
+/* Heading + paragraf */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-weight: 400 !important;
+	color: #444;
+	line-height: 1.3;
+	margin-bottom: 0.8125rem;
+}
+p {
+	line-height: 1.4;
+	margin-bottom: 0.8125rem;
+}
+p.lead {
+	line-height: 1.4;
+}
+
+
+
+/* Custom margin */
+.margin-top {
+	margin-top: 1.875rem;
+}
+.margin-right {
+	margin-right: 1.875rem;
+}
+.margin-bottom {
+	margin-bottom: 1.875rem;
+}
+.margin-left {
+	margin-left: 1.875rem;
+}
+
+
+
+/* Selection */
+::selection {
+	background-color: #13a7c7;
+	color: #fff;
+	text-shadow: none;
+}
+
+
+
+/* Horizontal rule */
+hr.line {
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+	background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+	background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1), rgba(0, 0, 0, 0));
+	border: 0;
+}
+
+
+
+/* #Custom CSS Foundation 5.0.2
+================================================== */
+
+
+
+/* Buttons */
+button,
+.button {
+	font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	font-size: 0.8125rem;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+button:hover,
+.button:hover {
+	text-decoration: none;
+}
+button:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+	outline: 0 auto -webkit-focus-ring-color;
+	outline-offset: 0;
+}
+button.tiny,
+.button.tiny {
+	font-size: 0.625rem;
+}
+button.block,
+.button.block {
+	width: 100% !important;
+}
+button.dark,
+.button.dark {
+	background-color: #444;
+	color: #fff;
+	border-color: #252525;
+}
+	button.dark:hover,
+	.button.dark:hover,
+	button.dark:focus,
+	.button.dark:focus {
+		background-color: #252525;
+		color: #fff;
+	}
+
+
+
+/* Input */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
+	height: 2.875rem;
+	font-size: 1rem;
+	font-style: italic;
+	border-width: 2px;
+	border-radius: 4px;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+	-webkit-transition: 0.25s;
+			transition: 0.25s;
+}
+	input[type="text"]:focus,
+	input[type="password"]:focus,
+	input[type="date"]:focus,
+	input[type="datetime"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="month"]:focus,
+	input[type="week"]:focus,
+	input[type="email"]:focus,
+	input[type="number"]:focus,
+	input[type="search"]:focus,
+	input[type="tel"]:focus,
+	input[type="time"]:focus,
+	input[type="url"]:focus,
+	textarea:focus {
+		border-color: #999;
+		-webkit-box-shadow: none;
+		   -moz-box-shadow: none;
+				box-shadow: none;
+		outline: none;
+		outline: 0 auto -webkit-focus-ring-color;
+		outline-offset: 0;
+	}
+		textarea {
+			height: 8.375rem;
+		}
+
+
+
+/* Images thumbnails */
+.th:hover,
+.th:focus {
+	-webkit-box-shadow: 0 0 6px 1px rgba(26, 26, 26, 0.5);
+			box-shadow: 0 0 6px 1px rgba(26, 26, 26, 0.5);
+}
+
+
+
+/* #Themes Styles
+================================================== */
+
+
+
+/* Header */
+.header {
+	background-color: #fff;
+	text-align: center;
+	padding: 1.25rem 0;
+}
+	.header h3 {
+		font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+		font-weight: 400 !important;
+		margin: 0;
+	}
+	.header h3 a,
+	.header h3 a:hover {
+		color: #333;
+	}
+		.header h3 a:hover {
+			text-decoration: none;
+		}
+			.header .fi-foundation {
+				color: #13a7c7;
+			}
+
+
+
+/* Content */
+.content {
+	text-align: center;
+	padding: 4.375rem 0;
+}
+	.content h1 {
+		color: #fff;
+	}
+.preview {
+	margin-top: 3.125rem;
+}
+.img-preview {
+	display: block;
+	width: 100%;
+	margin: 0;
+}
+	.img-preview h5 {
+		color: #fff;
+	}
+		.img-preview img {
+			display: block;
+			width: 100%;
+			height: auto;
+			margin: 0 auto 1.25rem;
+			cursor: pointer;
+			-webkit-transition: all 0.2s linear;
+			   -moz-transition: all 0.2s linear;
+				-ms-transition: all 0.2s linear;
+				 -o-transition: all 0.2s linear;
+					transition: all 0.2s linear;
+		}
+		.img-preview:hover img {
+			-webkit-box-shadow: 0px 75px 100px rgba(0, 0, 0, 0.5);
+					box-shadow: 0px 75px 100px rgba(0, 0, 0, 0.5);
+			-webkit-transform: scale(1.1, 1.1);
+			   -moz-transform: scale(1.1, 1.1);
+				-ms-transform: scale(1.1, 1.1);
+				 -o-transform: scale(1.1, 1.1);
+					transform: scale(1.1, 1.1);
+			-webkit-transform-origin: 50% 50%;
+			   -moz-transform-origin: 50% 50%;
+				-ms-transform-origin: 50% 50%;
+				 -o-transform-origin: 50% 50%;
+					transform-origin: 50% 50%;
+		}
+.button-preview {
+	margin: 2.5rem 0 0 0;
+	padding-left: 0;
+	list-style: none;
+}
+	.button-preview li {
+		display: inline-block;
+		line-height: 1;
+		margin: 0 5px;
+		padding: 0;
+	}
+		.button-preview .fi-eye,
+		.button-preview .fi-alert {
+			font-size: 1.125rem;
+		}
+
+
+
+/* Footer */
+.footer {
+	background-color: #fff;
+	color: #333;
+	padding: 1.125rem 0;
+}
+	.footer p {
+		margin: 0;
+	}
+		.footer .fi-heart {
+			color: #fd487d;
+			margin: 0 2px;
+		}
+/** Social media **/
+.social-media {
+	text-align: right;
+	margin: 9px 0 0 0;
+	padding-left: 0;
+	list-style: none;
+}
+	.social-media li {
+		display: inline-block;
+		line-height: 1;
+		margin-right: 8px;
+		padding: 0;
+	}
+	.social-media li:last-child {
+		margin-bottom: 0;
+	}
+		.social-media a {
+			font-size: 2.25rem;
+			color: #333;
+		}
+		.social-media a:hover {
+			color: #43ac6a;
+			text-decoration: none;
+		}
+
+
+
+/* #Media queries are built using ems in Foundation.
+============================================================================ */
+
+
+/* Max-width 40rem = 640px */
+@media only screen and (max-width: 40rem)  {
+	.img-preview img {
+		width: 70%;
+		margin: 0 auto 1.25rem;
+	}
+	.footer p,
+	.social-media {
+		text-align: center;
+	}
+}

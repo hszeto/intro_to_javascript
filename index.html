@@ -457,50 +457,50 @@ title: Home
         //set up submit handler to make ajax call
         $('#submit-email').on('valid.fndtn.abide', function () {
 
-                   //if email is valid send request to server so they can be added to mailing list
-                   $.ajax({
-                        type: 'POST',
-                        url: 'http://54.164.118.76:8080/subcribe-users/subscribe',
-                        data: JSON.stringify('test-github-1@d.com'),
-                        contentType: 'application/json',
-                        dataType: 'jsonp'
-                    })
-                         .done(function(data){
+             //if email is valid send request to server so they can be added to mailing list
+             $.ajax({
+                url: 'http://54.164.118.76:8080/subcribe-users/subscribe',
+                data: {
+                    format: 'json'
+                },
+                error: function() {
 
-                               //get the height of the section so it doesn't change when we hide the email form
-                               var height = $('#subscribe').height();
+                    //get the height of the section so it doesn't change when we hide the email form
+                    var height = $('#subscribe').height();
 
-                               //hide the signup form from view
-                               $('#signup').hide();
+                    //hide the signup form from view
+                    $('#signup').hide();
 
-                               //replace it with the success message, keeping it's previous height
-                               var success  = $('#success');
-                               success.html('<p class="lead">You are signed up!</p>');
-                               success.css('height',height + 'px');
+                    //replace it with the success message, keeping it's previous height
+                    var response  = $('#response');
+                    response.html('<p class="lead">There was an error!</p>');
+                    response.css('height',height + 'px');
 
-                            })
-                            .fail(function() {
 
-                                //post fails
-                                $('#failure').html('<p class="lead">request failed!</p>');
+                },
+                dataType: 'jsonp',
+                success: function(data) {
 
-                            });
+                    //get the height of the section so it doesn't change when we hide the email form
+                    var height = $('#subscribe').height();
 
-                });
+                    //hide the signup form from view
+                    $('#signup').hide();
+
+                    //replace it with the success message, keeping it's previous height
+                    var response  = $('#response');
+                    response.html('<p class="lead">You are signed up!</p>');
+                    response.css('height',height + 'px');
+                },
+                type: 'GET'
+            });
+
+         });
     </script>
 
 
 </body>
 
-//get the height of the section so it doesn't change when we hide the email form
-var height = $('#subscribe').height();
 
-//hide the signup form from view
-$('#signup').hide();
-
-//replace it with the success message, keeping it's previous height
-var success  = $('#success');
-success.html('<p class="lead">You are signed up!</p>');
-success.css('height',height + 'px');
 
 </html>

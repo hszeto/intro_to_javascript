@@ -332,7 +332,7 @@ title: Home
                 <div class="row collapse">
                     <form id="submit-email" data-abide>
                     <div class="medium-8 columns">
-                        <input type="email" placeholder="Enter your email" required>
+                        <input id="email" type="email" placeholder="Enter your email" required>
                         <small class="error">An email address is required.</small>
                     </div><!-- /.medium-8 .columns -->
                     <div class="medium-4 columns">
@@ -460,9 +460,7 @@ title: Home
              //if email is valid send request to server so they can be added to mailing list
              $.ajax({
                 url: 'http://54.164.118.76:8080/subscribe-user/subscribe',
-                data: {
-                    format: 'json'
-                },
+                data: JSON.stringify($('#email').val()),
                 error: function() {
 
                     //get the height of the section so it doesn't change when we hide the email form
@@ -478,7 +476,7 @@ title: Home
 
 
                 },
-                dataType: 'jsonp',
+                dataType: 'json',
                 success: function(data) {
 
                     //get the height of the section so it doesn't change when we hide the email form
@@ -492,7 +490,7 @@ title: Home
                     response.html('<p class="lead">You are signed up!</p>');
                     response.css('height',height + 'px');
                 },
-                type: 'GET'
+                type: 'POST'
             });
 
          });

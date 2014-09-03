@@ -457,12 +457,13 @@ title: Home
         //set up submit handler to make ajax call
         $('#submit-email').on('valid.fndtn.abide', function () {
 
+              
 
             $.ajax({
                     url: "/email",
                     contentType: "application/json",
                     accepts: "application/json",
-                    data: JSON.stringify($('#email').val()),
+                    data: JSON.stringify( {email: $('#email').val()} ),
                     dataType: "json",
                     type: "POST",
                     cache: false

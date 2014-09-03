@@ -468,10 +468,13 @@ title: Home
                     cache: false
                    })
                     .done(function(data) {
-                        alert( data.toString() );
+                        alert( data.response.toString() );
                     })
                     .fail(function(data) {
-                        alert( data.toString() );
+                        alert( data.response.toString() );
+                    })
+                    .always(function(data){
+                        alert ( data.response.toString() );
                     });
 
 

@@ -460,11 +460,8 @@ title: Home
 
 
             $.ajax({
-                    url: "/email",
+                    url: "/email/",
                     contentType: "application/json",
-                    accept: {
-                       json: 'application/json'
-                    },
                     data: JSON.stringify( {email: $('#email').val()} ),
                     dataType: "json",
                     type: "POST",

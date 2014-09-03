@@ -467,14 +467,11 @@ title: Home
                     type: "POST",
                     cache: false
                    })
-                    .done(function() {
-                        alert( "success" );
+                    .done(function(data) {
+                        alert( data.toString() );
                     })
-                    .fail(function() {
-                        alert( "error" );
-                    })
-                    .always(function() {
-                        alert( "complete" );
+                    .fail(function(data) {
+                        alert( data.toString() );
                     });
 
 

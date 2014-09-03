@@ -472,9 +472,9 @@ title: Home
                     })
                     .fail(function(data) {
                         console.log("request failed");
-                        console.log(data);
+                        console.log(data.statusCode);
                         console.log(arguments);
-                       
+
                     })
                     .always(function(data){
                         //console.log(data);

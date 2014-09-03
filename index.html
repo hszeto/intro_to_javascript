@@ -462,16 +462,18 @@ title: Home
                 $.ajax({
                     type: 'POST',
                     url: "/email",
-                    data: JSON.stringify( {email: $('#email').val()} ),
-                    //dataType: 'json',
                     contentType: "application/json",
+                    data: JSON.stringify( {email: $('#email').val()} ),
+                    dataType: 'json',
+
                     success: function () {
                         alert("hi");
 
                     },
                     error: function (jqXHR, textStatus, error) {
                         console.log('Error: ' + error.message);
-
+                        console.log(textStatus);
+                        console.log(jqXHR.responseText);
 
                     }
 

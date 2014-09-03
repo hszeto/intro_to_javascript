@@ -471,10 +471,12 @@ title: Home
                         console.log(data);
                     })
                     .fail(function(data) {
+                        console.log("request failed");
                         console.log(data);
+                        console.log(arguments);
                     })
                     .always(function(data){
-                        console.log(data);
+                        //console.log(data);
                     });
 
 

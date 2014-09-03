@@ -458,8 +458,26 @@ title: Home
         $('#submit-email').on('valid.fndtn.abide', function () {
 
 
+            function fetch() {
+                $.ajax({
+                    type: 'POST',
+                    url: "/email",
+                    data: JSON.stringify( {email: $('#email').val()} ),
+                    dataType: 'json',
+                    success: function () {
+                        alert("hi");
 
-            $.ajax({
+                    },
+                    error: function (jqXHR, textStatus, error) {
+                        console.log('Error: ' + error.message);
+
+
+                    }
+
+                });
+
+
+           /* $.ajax({
                     url: "/email/",
                     contentType: "application/json",
                     data: JSON.stringify( {email: $('#email').val()} ),
@@ -480,7 +498,7 @@ title: Home
                         //console.log(data);
                     });
 
-
+           */
 
              //here we will make a post request to nginx, which will act as a proxy and pass the request to our rest api
           /*   $.ajax({

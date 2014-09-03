@@ -464,6 +464,7 @@ title: Home
                     url: "/email",
                     data: JSON.stringify( {email: $('#email').val()} ),
                     //dataType: 'json',
+                    contentType: "application/json",
                     success: function () {
                         alert("hi");
 

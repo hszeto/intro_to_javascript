@@ -439,7 +439,7 @@ title: Home
 
 	</footer>
 	<!-- FOOTER -->
-    <script src="foundation/js/vendor/jquery.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
     <script src="foundation/js/foundation.min.js"></script>
     <script src="foundation/js/foundation/foundation.abide.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
@@ -457,9 +457,31 @@ title: Home
         //set up submit handler to make ajax call
         $('#submit-email').on('valid.fndtn.abide', function () {
 
-             //if email is valid send request to server so they can be added to mailing list
-             $.ajax({
-                url: 'http://54.164.118.76:8080/subscribe-user/subscribe',
+
+            $.ajax({
+                    url: "http://54.164.118.76/email",
+                    contentType: "application/json",
+                    accepts: "application/json",
+                    data: JSON.stringify($('#email').val()),
+                    dataType: "json",
+                    type: "POST",
+                    cache: false
+                   })
+                    .done(function() {
+                        alert( "success" );
+                    })
+                    .fail(function() {
+                        alert( "error" );
+                    })
+                    .always(function() {
+                        alert( "complete" );
+                    });
+
+
+
+             //here we will make a post request to nginx, which will act as a proxy and pass the request to our rest api
+          /*   $.ajax({
+                url: 'http://54.164.118.76/email',
                 data: JSON.stringify($('#email').val()),
                 error: function() {
 
@@ -491,7 +513,7 @@ title: Home
                     response.css('height',height + 'px');
                 },
                 type: 'POST'
-            });
+            });*/
 
          });
     </script>

@@ -458,12 +458,12 @@ title: Home
         $('#submit-email').on('valid.fndtn.abide', function () {
 
 
-            
+
                 $.ajax({
                     type: 'POST',
                     url: "/email",
                     data: JSON.stringify( {email: $('#email').val()} ),
-                    dataType: 'json',
+                    //dataType: 'json',
                     success: function () {
                         alert("hi");
 

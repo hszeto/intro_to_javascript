@@ -470,10 +470,11 @@ title: Home
                     .done(function(data) {
                         console.log(data);
                     })
-                    .fail(function(data) {
+                    .fail(function(xhr,status,error) {
                         console.log("request failed");
-                        console.log(data);
+                        console.log(xhr.responseText);
                         console.log(arguments);
+                        console.log(error);
                     })
                     .always(function(data){
                         //console.log(data);

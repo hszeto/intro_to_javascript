@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script>
+	// new empty array
+	var newDude = [];
+
+	// grab values from HTML with the right ID's
+	//.onclick is possible option
+	window.onload = function(){
+		document.getElementById('submit').addEventListener('click', function(){
+				var first = document.getElementById('first').value;
+				var last  = document.getElementById('last').value;
+				var age   = document.getElementById('age').value;
+				var email = document.getElementById('email').value;
+		// push new User into array		
+		newDude.push(new User(first, last, age, email)); 
+		});
+	};
+
+	//always capitalize classes in every language
+	// define User 
+	function User(first, last, age, email){
+		this.first = first;
+		this.last = last;
+		this.age = age;
+		this.email = email;
+		this.toString = function(){
+			return "My name is " + this.first + ".";
+		};
+	}
+</script>
+</head>
+
+<body>
+	<!-- User input -->
+	<input id="first" type="text" placeholder="first"><br>
+	<input id="last" type="text" placeholder="last"><br>
+	<input id="age" type="text" placeholder="age"><br>
+	<input id="email" type="text" placeholder="email"><br>
+	<button id="submit">Submit</button><br>
+</body>
+
+</html>

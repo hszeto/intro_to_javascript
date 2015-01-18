@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.css.map" />
+    <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="custom.css" />
+
+</head>
+<body>
+<h1>Simple interactive clicks with Javascript</h1>
+
+<table class="table" id="vehicles" >
+   <thead>
+    <tr id="vehicle-type">
+      <th >Car</th><th >Truck</th><th>Van</th>
+    </tr>
+   </thead>
+    <tbody>
+    <tr id="num-doors">
+       <td id="car" data-cost="$$">Ford Explorer</td><td id="truck" data-cost="$$$">Toyota Tundra</td><td id="van" data-cost="$$$$"ß>Mercedes Sprinter</td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <input class="form-control half-width" type="text" name="vehicle-cost" placeholder="Click a car to see the cost...." readonly>&nbsp;&nbsp;&nbsp;
+    <button id="reset-cost">Reset</button>
+</div>
+
+<div>
+   <button id="add-dollars" class="top-margin">Add up all the dollar signs</button>&nbsp;&nbsp;&nbsp;
+    <input class="form-control half-width" type="text" name="total-dollars" placeholder="The total number of dollar signs is..." readonly>
+   &nbsp;&nbsp;&nbsp; <button id="clear-dollars">Reset</button>
+</div>
+
+
+
+
+<script>
+    /************************CLICKING TO SEE DOLLARS*******************************************************************/
+var carColumn = document.getElementById("car");
+var truckColumn = document.getElementById("truck");
+var vanColumn = document.getElementById("van");
+var resetCost = document.getElementById("reset-cost");
+    /*******************************ADDING THE TOTAL DOLLAR SIGNS*************************************************/
+
+    //now that we have a reference to the column with id "car", lets add an event handler to it.
+carColumn.addEventListener("click", function() {
+    // Here we are looking to find the element that has a name of "vehicle-cost", and were saying give us the first one.
+    document.getElementsByName('vehicle-cost')[0].placeholder = carColumn.getAttribute('data-cost');
+}, false);
+truckColumn.addEventListener("click", function() {
+    document.getElementsByName('vehicle-cost')[0].placeholder = truckColumn.getAttribute('data-cost');
+}, false);
+vanColumn.addEventListener("click", function() {
+    document.getElementsByName('vehicle-cost')[0].placeholder = vanColumn.getAttribute('data-cost');
+}, false);
+
+  var showDollars = document.getElementsByName('total-dollars')[0];
+  var addDollars = document.getElementById("add-dollars");
+  var clearDollars = document.getElementById("clear-dollars");
+
+  addDollars.addEventListener("click", function(){
+    var table = document.getElementById("vehicles");
+    var cells = table.getElementsByTagName("td");
+    var totalCost = "";
+    for (var i=0; i<cells.length; i++) {
+      totalCost += cells[i].getAttribute("data-cost");
+    }
+    showDollars.placeholder = totalCost;
+  }
+
+resetCost.addEventListener("click", function() {
+    document.getElementsByName('vehicle-cost')[0].placeholder = resetCost.getAttribute('data-cost');
+}, false);
+
+
+
+</script>
+</body>
+</html>
